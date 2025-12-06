@@ -1,0 +1,28 @@
+configuration {
+    modes: [ drun, window, run ];
+    font: "JetBrains Mono 12";
+    display-drun: "Apps";
+    display-window: "Windows";
+    display-run: "Run";
+    drun-display-format: "{name}";
+    window-format: "{w}";
+    click-to-exit: true;
+    show-icons: true;
+    icon-theme: "MacTahoe-Dark";
+    hover-select: true;
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
+}
+
+@theme "themes/matugen"
+
+
+entry {
+    placeholder: "Type to search...";
+}
+
+listview {
+    columns: 1;
+    lines: 8;
+    spacing: 5px;
+}

@@ -1,0 +1,218 @@
+{
+  "reload_style_on_change": true,
+  "layer": "top",
+  "position": "top",
+  "spacing": 4,
+  "height": 22,
+  "modules-left": ["custom/arch", "hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+
+  "modules-right": [
+    "custom/screenrecording-indicator",
+    "custom/update",
+    "custom/sysinfo",
+    "hyprland/language",
+    "pulseaudio",
+    "custom/mic-indicator",
+    "bluetooth",
+    "network",
+    "battery",
+    "custom/notification"
+  ],
+
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "active": "󱓻"
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 50,
+    "separate-outputs": true
+  },
+
+  "custom/arch": {
+    "format": "",
+    "on-click": "~/.config/rofi/launchers/launcher.sh &",
+    "tooltip-format": "Fedora Menu\n\nSuper + r"
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+
+  "mpris": {
+    "format": "{status_icon} {dynamic}",
+    "format-paused": "{status_icon} {dynamic}",
+    "dynamic-len": 40,
+    "status-icons": {
+      "playing": "▶",
+      "paused": "⏸",
+      "stopped": ""
+    },
+    "tooltip-format": "{player}: {title} - {artist}"
+  },
+
+  "custom/update": {
+    "format": "",
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/check-updates-fedora.sh",
+    "on-click": "gnome-software &",
+    "on-click-right": "gnome-software --mode=updates &",
+    "tooltip": true,
+    "signal": 8,
+    "interval": 1800
+  },
+
+  "custom/sysinfo": {
+    "format": "󰍛",
+    "tooltip": true,
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/sysinfo.sh",
+    "interval": 2,
+    "on-click": "kitty -e btop"
+  },
+
+  "clock": {
+    "format": "{:L%A %I:%M %p}",
+    "format-alt": "{:L%d %B %Y}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+  "network": {
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format": "{icon}",
+    "format-wifi": "{icon}",
+    "format-ethernet": "󰀂",
+    "format-disconnected": "󰤮",
+    "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "interval": 3,
+    "on-click": "networkmanager_dmenu"
+  },
+
+  "battery": {
+    "format": "{icon}",
+    "format-discharging": "{icon}",
+    "format-charging": "{icon}",
+    "format-plugged": "",
+    "format-icons": {
+      "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+      "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "format-full": "󰂅",
+    "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+    "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+    "interval": 5,
+    "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh &",
+    "states": {
+      "warning": 20,
+      "critical": 10
+    }
+  },
+
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": "",
+    "tooltip-format": "Devices connected: {num_connections}",
+    "on-click": "blueman-manager"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}",
+    "on-click": "kitty --class=wiremix -e wiremix",
+    "tooltip-format": "{volume}%",
+    "scroll-step": 5,
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", "", ""]
+    }
+  },
+  "custom/mic-indicator": {
+    "exec": "~/.config/waybar/scripts/check-mic.sh",
+    "interval": 1,
+    "format": "{}",
+    "tooltip": true,
+    "return-type": "json",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-",
+    "signal": 9
+  },
+  "custom/screenrecording-indicator": {
+    "exec": "~/.config/waybar/scripts/check-recording.sh",
+    "interval": 2,
+    "format": "{}",
+    "tooltip": true,
+    "return-type": "json",
+    "signal": 8
+  },
+  "custom/notification": {
+    "tooltip": true,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪓"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+    "escape": true
+  },
+
+  "custom/netusage": {
+    "interval": 1,
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/netusage2.sh",
+    "format": "{}  "
+  },
+  "hyprland/language": {
+    "format": "{}",
+    "format-en": "EN",
+    "format-ar": "AR"
+  },
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": false
+  }
+}

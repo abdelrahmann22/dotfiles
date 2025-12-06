@@ -1,0 +1,17 @@
+/* MATUGEN THEME FOR ROFI */
+/* Auto-generated colors from wallpaper */
+
+@import "~/.config/rofi/colors/matugen.rasi"
+
+* {
+    bg0:    @background;
+    bg1:    @background-alt;
+    bg2:    @background-alt;
+    bg3:    @selected;
+    fg0:    @foreground;
+    fg1:    @foreground;
+    fg2:    @foreground;
+    fg3:    @background-alt;
+}
+
+@import "template/rounded-template.rasi"

@@ -1,0 +1,16 @@
+/* CUSTOM CATPPUCCIN THEME */
+/* Catppuccin Mocha inspired color scheme */
+
+* {
+    bg0:    #1e1e2eF2;
+    bg1:    #313244;
+    bg2:    #45475a80;
+    bg3:    #89b4faF2;
+    fg0:    #cdd6f4;
+    fg1:    #ffffff;
+    fg2:    #bac2de;
+    fg3:    #585b70;
+}
+
+@import "template/rounded-template.rasi"
+

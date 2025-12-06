@@ -1,0 +1,18 @@
+[general]
+framerate = 144
+
+[color]
+background = 'default'
+foreground = '#8ccff0'
+
+gradient = 0
+gradient_color_1 = '#004d65'
+gradient_color_2 = '#8ccff0'
+gradient_color_3 = '#bee9ff'
+
+horizontal_gradient = 0
+horizontal_gradient_color_1 = '#004d65'
+horizontal_gradient_color_2 = '#8ccff0'
+horizontal_gradient_color_3 = '#bee9ff'
+horizontal_gradient_color_4 = '#8ccff0'
+horizontal_gradient_color_5 = '#004d65'

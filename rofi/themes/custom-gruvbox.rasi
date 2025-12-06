@@ -1,0 +1,16 @@
+/* CUSTOM GRUVBOX THEME */
+/* Gruvbox dark inspired color scheme */
+
+* {
+    bg0:    #282828F2;
+    bg1:    #3c3836;
+    bg2:    #50494580;
+    bg3:    #b8bb26F2;
+    fg0:    #ebdbb2;
+    fg1:    #fbf1c7;
+    fg2:    #d5c4a1;
+    fg3:    #665c54;
+}
+
+@import "template/rounded-template.rasi"
+

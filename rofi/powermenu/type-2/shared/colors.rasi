@@ -1,0 +1,7 @@
+/* Import shared matugen colors */
+@import "~/.config/rofi/colors/matugen.rasi"
+
+
+
+
+

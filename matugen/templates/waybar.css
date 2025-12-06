@@ -1,0 +1,251 @@
+/* Waybar CSS - Matugen Generated */
+/* colors defined at top for easy configuring */
+@define-color background #{{colors.surface.default.hex_stripped}};
+@define-color second-background #{{colors.surface_container.default.hex_stripped}};
+@define-color text #{{colors.on_surface.default.hex_stripped}};
+@define-color borders #{{colors.outline.default.hex_stripped}};
+@define-color focused #{{colors.primary.default.hex_stripped}};
+@define-color focused2 #{{colors.secondary.default.hex_stripped}};
+@define-color color1 #{{colors.tertiary.default.hex_stripped}};
+@define-color color2 #{{colors.secondary.default.hex_stripped}};
+@define-color color3 #{{colors.primary.default.hex_stripped}};
+@define-color urgent #{{colors.error.default.hex_stripped}};
+
+* {
+  background-color: transparent;
+  color: @text;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: "JetBrains Mono Nerd Font";
+  font-size: 12px;
+}
+
+window#waybar {
+  background-color: alpha(@background, 0.8);
+}
+
+/* Module containers - minimal spacing */
+.modules-left {
+  margin-left: 8px;
+}
+
+.modules-right {
+  margin-right: 8px;
+}
+
+/* Launcher */
+#custom-arch {
+  padding-right: 10px;
+  padding-left: 5px;
+  font-size: 15px;
+  border-radius: 8px;
+}
+#custom-arch:hover {
+  color: @color1;
+}
+/* Workspaces - Omarchy style */
+#workspaces button {
+  all: initial;
+  padding: 0 6px;
+  margin: 0 1.5px;
+  min-width: 9px;
+  color: @text;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+}
+
+#workspaces button.empty {
+  opacity: 0.3;
+}
+
+#workspaces button.active {
+  opacity: 1;
+  font-weight: bold;
+}
+
+#workspaces button:hover {
+  opacity: 0.8;
+}
+
+/* Idle inhibitor */
+#idle_inhibitor {
+  margin: 0 7.5px;
+  min-width: 12px;
+  opacity: 0.7;
+}
+
+#idle_inhibitor.activated {
+  opacity: 1;
+  color: @urgent;
+}
+
+/* Window title */
+#window {
+  margin: 0 10px;
+  opacity: 0.7;
+}
+
+/* Clock - centered, minimal */
+#clock {
+  margin-left: 8.75px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* Updates */
+#custom-update {
+  margin: 0 7.5px;
+  min-width: 12px;
+  opacity: 0.85;
+}
+
+/* System monitors - Omarchy spacing */
+#custom-sysinfo {
+  min-width: 12px;
+  margin: 0 7.5px;
+  opacity: 0.85;
+}
+
+/* Network */
+#network {
+  margin: 0 7.5px;
+  opacity: 0.85;
+}
+
+#network.disconnected {
+  opacity: 0.5;
+}
+
+/* Network Speed */
+#network.speed {
+  margin: 0 7.5px;
+  min-width: 12px;
+  opacity: 0.85;
+}
+
+/* Language Indicator */
+#language {
+  margin: 0 7.5px;
+  min-width: 12px;
+  opacity: 0.85;
+  font-weight: bold;
+}
+
+/* Audio */
+#pulseaudio {
+  margin: 0 7.5px;
+  min-width: 12px;
+  opacity: 0.85;
+}
+
+#pulseaudio.muted {
+  opacity: 0.5;
+}
+
+/* Battery */
+#battery {
+  min-width: 12px;
+  margin: 0 7.5px;
+  opacity: 0.85;
+}
+
+#battery.charging {
+  opacity: 1;
+}
+
+#battery.warning:not(.charging) {
+  color: @focused2;
+}
+
+#battery.critical:not(.charging) {
+  color: @urgent;
+}
+
+/* Bluetooth */
+#bluetooth {
+  margin: 0 7.5px;
+  opacity: 0.85;
+}
+
+#bluetooth.disabled {
+  opacity: 0.4;
+}
+
+#bluetooth.connected {
+  opacity: 1;
+}
+
+/* Notifications */
+#custom-notification {
+  margin: 0 7.5px;
+  min-width: 12px;
+  opacity: 0.85;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+/* Power Menu */
+#custom-power {
+  margin: 0 7.5px;
+  min-width: 12px;
+  opacity: 0.85;
+}
+
+#custom-power:hover {
+  opacity: 1;
+}
+
+/* Recording Indicator */
+#custom-screenrecording-indicator {
+  margin: 0 7.5px;
+  min-width: 12px;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+#custom-screenrecording-indicator.recording {
+  color: @urgent;
+  opacity: 1;
+}
+
+#custom-screenrecording-indicator.idle {
+  opacity: 0;
+}
+
+/* Microphone Indicator */
+#custom-mic-indicator {
+  margin: 0 7.5px;
+  min-width: 12px;
+  opacity: 0.85;
+}
+
+#custom-mic-indicator.active {
+  opacity: 0.85;
+}
+
+#custom-mic-indicator.muted {
+  opacity: 0.5;
+}
+
+#custom-mic-indicator.inactive {
+  opacity: 0;
+}
+
+/* Tooltip - clean Omarchy style */
+tooltip {
+  padding: 6px 10px;
+  background-color: @second-background;
+  border: 1px solid @borders;
+  border-radius: 4px;
+  opacity: 0.95;
+}
+
+tooltip label {
+  color: @text;
+}
+
+/* Hidden state */
+.hidden {
+  opacity: 0;
+}
