@@ -1,6 +1,7 @@
 #!/bin/bash
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CONFIG_SRC="$DOTFILES_DIR/config"
 CONFIG_DEST="$HOME/.config"
 BACKUP_DIR="$HOME/.config-backup-$(date +%Y%m%d-%H%M%S)"
 
@@ -66,7 +67,7 @@ configs=(
 
 # Link config directories
 for dir_name in "${configs[@]}"; do
-    src="$DOTFILES_DIR/$dir_name"
+    src="$CONFIG_SRC/$dir_name"
     dest="$CONFIG_DEST/$dir_name"
     if [ -d "$src" ]; then
         backup_and_link "$src" "$dest" "$dir_name"
