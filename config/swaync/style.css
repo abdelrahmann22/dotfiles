@@ -7,12 +7,12 @@
 
 /* Control Center Panel */
 .control-center {
-  background: alpha(#0f1417, 0.95);
+  background: alpha(#0e1415, 0.85);
   border-radius: 8px;
   padding: 12px;
   margin: 8px;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
-  border: 1px solid alpha(#8ccff0, 0.3);
+  border: 1px solid alpha(#81d3de, 0.3);
 }
 
 .control-center .widget {
@@ -25,19 +25,19 @@ scrollbar {
 }
 
 scrollbar slider {
-  background: alpha(#8a9297, 0.4);
+  background: alpha(#899294, 0.4);
   border-radius: 3px;
   min-width: 5px;
   min-height: 5px;
 }
 
 scrollbar slider:hover {
-  background: alpha(#8a9297, 0.6);
+  background: alpha(#899294, 0.6);
 }
 
 /* Title Widget */
 .widget-title {
-  color: #dfe3e7;
+  color: #dee4e4;
   font-size: 14pt;
   font-weight: 600;
   padding: 2px 8px;
@@ -45,18 +45,18 @@ scrollbar slider:hover {
 }
 
 .widget-title > button {
-  color: #8ccff0;
+  color: #81d3de;
   font-size: 10pt;
   font-weight: 500;
   padding: 6px 12px;
   border-radius: 8px;
-  background: alpha(#8ccff0, 0.1);
+  background: alpha(#81d3de, 0.1);
   border: none;
   transition: all 0.2s ease;
 }
 
 .widget-title > button:hover {
-  background: alpha(#8ccff0, 0.2);
+  background: alpha(#81d3de, 0.2);
 }
 
 /* ==================== */
@@ -74,8 +74,8 @@ scrollbar slider:hover {
 
 /* Generic button styling for all button grids */
 .widget-buttons-grid button {
-  background: alpha(#1b2023, 0.6);
-  color: #8a9297;
+  background: alpha(#1b2122, 0.6);
+  color: #899294;
   border-radius: 12px;
   padding: 6px 4px;
   margin: 2px;
@@ -89,19 +89,19 @@ scrollbar slider:hover {
 }
 
 .widget-buttons-grid button:hover {
-  background: alpha(#1b2023, 0.8);
-  color: #dfe3e7;
+  background: alpha(#1b2122, 0.8);
+  color: #dee4e4;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .widget-buttons-grid button:checked {
-  background: alpha(#8ccff0, 0.25);
-  color: #8ccff0;
+  background: alpha(#81d3de, 0.25);
+  color: #81d3de;
   box-shadow: 0 2px 6px rgba(196, 202, 167, 0.2);
 }
 
 .widget-buttons-grid button:checked:hover {
-  background: alpha(#8ccff0, 0.35);
+  background: alpha(#81d3de, 0.35);
   box-shadow: 0 3px 8px rgba(196, 202, 167, 0.25);
 }
 
@@ -140,7 +140,7 @@ scrollbar slider:hover {
 }
 
 .widget-backlight label {
-  color: #8ccff0;
+  color: #81d3de;
   font-size: 16pt;
   margin-right: 12px;
 }
@@ -150,20 +150,20 @@ scrollbar slider:hover {
 }
 
 .widget-backlight scale trough {
-  background: #1b2023;
+  background: #1b2122;
   border-radius: 3px;
   min-height: 6px;
   border: none;
 }
 
 .widget-backlight scale highlight {
-  background: #8ccff0;
+  background: #81d3de;
   border-radius: 3px;
   min-height: 6px;
 }
 
 .widget-backlight scale slider {
-  background: #dfe3e7;
+  background: #dee4e4;
   border-radius: 50%;
   min-width: 14px;
   min-height: 14px;
@@ -186,7 +186,7 @@ scrollbar slider:hover {
 }
 
 .widget-volume label {
-  color: #8ccff0;
+  color: #81d3de;
   font-size: 16pt;
   margin-right: 12px;
 }
@@ -196,20 +196,20 @@ scrollbar slider:hover {
 }
 
 .widget-volume scale trough {
-  background: #1b2023;
+  background: #1b2122;
   border-radius: 3px;
   min-height: 6px;
   border: none;
 }
 
 .widget-volume scale highlight {
-  background: #8ccff0;
+  background: #81d3de;
   border-radius: 3px;
   min-height: 6px;
 }
 
 .widget-volume scale slider {
-  background: #dfe3e7;
+  background: #dee4e4;
   border-radius: 50%;
   min-width: 14px;
   min-height: 14px;
@@ -223,8 +223,8 @@ scrollbar slider:hover {
 }
 
 .widget-volume button {
-  background: alpha(#1b2023, 0.6);
-  color: #dfe3e7;
+  background: alpha(#1b2122, 0.6);
+  color: #dee4e4;
   border-radius: 8px;
   padding: 6px 10px;
   border: none;
@@ -232,21 +232,21 @@ scrollbar slider:hover {
 }
 
 .widget-volume button:hover {
-  background: alpha(#1b2023, 0.8);
+  background: alpha(#1b2122, 0.8);
 }
 
 /* ==================== */
 /* DND Widget - Compact */
 /* ==================== */
 .widget-dnd {
-  background: alpha(#1b2023, 0.4);
+  background: alpha(#1b2122, 0.4);
   border-radius: 8px;
   padding: 8px 12px;
   border: none;
 }
 
 .widget-dnd > switch {
-  background: #1b2023;
+  background: #1b2122;
   border-radius: 12px;
   padding: 2px;
   min-width: 44px;
@@ -255,11 +255,11 @@ scrollbar slider:hover {
 }
 
 .widget-dnd > switch:checked {
-  background: alpha(#8ccff0, 0.5);
+  background: alpha(#81d3de, 0.5);
 }
 
 .widget-dnd > switch slider {
-  background: #dfe3e7;
+  background: #dee4e4;
   border-radius: 10px;
   min-width: 18px;
   min-height: 18px;
@@ -267,7 +267,7 @@ scrollbar slider:hover {
 }
 
 .widget-dnd > label {
-  color: #dfe3e7;
+  color: #dee4e4;
   font-weight: 500;
 }
 
@@ -297,19 +297,19 @@ scrollbar slider:hover {
 }
 
 .widget-mpris-title {
-  color: #dfe3e7;
+  color: #dee4e4;
   font-weight: 600;
   font-size: 11pt;
 }
 
 .widget-mpris-subtitle {
-  color: #8a9297;
+  color: #899294;
   font-size: 10pt;
 }
 
 .widget-mpris > box > button {
   background: transparent;
-  color: #8a9297;
+  color: #899294;
   border-radius: 50%;
   padding: 4px;
   margin: 0 3px;
@@ -322,11 +322,11 @@ scrollbar slider:hover {
 
 .widget-mpris > box > button:hover {
   background: transparent;
-  color: #8ccff0;
+  color: #81d3de;
 }
 
 .widget-mpris > box > button:active {
-  color: #dfe3e7;
+  color: #dee4e4;
 }
 
 /* ==================== */
@@ -344,11 +344,11 @@ scrollbar slider:hover {
 }
 
 .notification {
-  background: alpha(#0f1417, 0.95);
+  background: alpha(#0e1415, 0.85);
   border-radius: 8px;
   margin: 6px 0;
   padding: 0;
-  border: 1px solid alpha(#8ccff0, 0.3);
+  border: 1px solid alpha(#81d3de, 0.3);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -365,12 +365,12 @@ scrollbar slider:hover {
 }
 
 .notification-default-action:hover {
-  background: alpha(#1b2023, 0.4);
+  background: alpha(#1b2122, 0.4);
 }
 
 .close-button {
-  background: alpha(#8a9297, 0.2);
-  color: #8a9297;
+  background: alpha(#899294, 0.2);
+  color: #899294;
   border-radius: 50%;
   padding: 2px;
   margin: 8px;
@@ -381,15 +381,15 @@ scrollbar slider:hover {
 }
 
 .close-button:hover {
-  background: alpha(#8a9297, 0.4);
-  color: #dfe3e7;
+  background: alpha(#899294, 0.4);
+  color: #dee4e4;
 }
 
 .notification-row .notification-background {
-  background: alpha(#0f1417, 0.95);
+  background: alpha(#0e1415, 0.85);
   border-radius: 8px;
   margin: 6px 0;
-  border: 1px solid alpha(#8ccff0, 0.3);
+  border: 1px solid alpha(#81d3de, 0.3);
 }
 
 .notification-row .notification-background .notification {
@@ -404,18 +404,18 @@ scrollbar slider:hover {
 }
 
 .summary {
-  color: #dfe3e7;
+  color: #dee4e4;
   font-size: 11pt;
   font-weight: 600;
 }
 
 .time {
-  color: #8a9297;
+  color: #899294;
   font-size: 9pt;
 }
 
 .body {
-  color: #8a9297;
+  color: #899294;
   font-size: 10pt;
 }
 
@@ -430,7 +430,7 @@ scrollbar slider:hover {
 }
 
 .critical .summary {
-  color: #8ccff0;
+  color: #81d3de;
 }
 
 /* Low urgency */
@@ -440,8 +440,8 @@ scrollbar slider:hover {
 
 /* Action buttons in notifications */
 .notification-action {
-  background: alpha(#1b2023, 0.8);
-  color: #dfe3e7;
+  background: alpha(#1b2122, 0.8);
+  color: #dee4e4;
   border-radius: 6px;
   padding: 6px 12px;
   margin: 4px;
@@ -450,8 +450,8 @@ scrollbar slider:hover {
 }
 
 .notification-action:hover {
-  background: alpha(#8ccff0, 0.25);
-  color: #8ccff0;
+  background: alpha(#81d3de, 0.25);
+  color: #81d3de;
 }
 
 .notification-action:first-child {
@@ -464,31 +464,31 @@ scrollbar slider:hover {
 
 /* Inline reply */
 .inline-reply {
-  background: alpha(#1b2023, 0.6);
+  background: alpha(#1b2122, 0.6);
   border-radius: 6px;
   margin-top: 8px;
   padding: 0;
 }
 
 .inline-reply-entry {
-  background: alpha(#0f1417, 0.8);
-  color: #dfe3e7;
+  background: alpha(#0e1415, 0.8);
+  color: #dee4e4;
   border-radius: 6px 0 0 6px;
   padding: 8px 12px;
-  caret-color: #8ccff0;
+  caret-color: #81d3de;
   border: none;
 }
 
 .inline-reply-button {
-  background: alpha(#8ccff0, 0.2);
-  color: #8ccff0;
+  background: alpha(#81d3de, 0.2);
+  color: #81d3de;
   border-radius: 0 6px 6px 0;
   padding: 8px 12px;
   border: none;
 }
 
 .inline-reply-button:hover {
-  background: alpha(#8ccff0, 0.3);
+  background: alpha(#81d3de, 0.3);
 }
 
 /* Floating notifications (popup) */
@@ -502,29 +502,29 @@ scrollbar slider:hover {
 
 /* Empty state */
 .control-center .widget-title > .notification-count {
-  color: #8a9297;
+  color: #899294;
   font-size: 10pt;
   font-weight: normal;
 }
 
 box.empty-notifications {
-  color: #8a9297;
+  color: #899294;
   font-size: 10pt;
   padding: 20px;
 }
 
 /* Per-app volume */
 .per-app-volume {
-  background: alpha(#1b2023, 0.4);
+  background: alpha(#1b2122, 0.4);
   border-radius: 6px;
   padding: 8px;
   margin: 4px 0;
 }
 
 .per-app-volume image {
-  color: #8ccff0;
+  color: #81d3de;
 }
 
 .per-app-volume label {
-  color: #dfe3e7;
+  color: #dee4e4;
 }
