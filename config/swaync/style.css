@@ -348,7 +348,7 @@ scrollbar slider:hover {
   border-radius: 8px;
   margin: 6px 0;
   padding: 0;
-  border: none;
+  border: 1px solid alpha(#8ccff0, 0.3);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -389,7 +389,7 @@ scrollbar slider:hover {
   background: alpha(#0f1417, 0.95);
   border-radius: 8px;
   margin: 6px 0;
-  border: none;
+  border: 1px solid alpha(#8ccff0, 0.3);
 }
 
 .notification-row .notification-background .notification {
