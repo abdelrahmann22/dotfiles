@@ -1,0 +1,339 @@
+/* Matugen Generated Theme for Discord/Vencord */
+
+/* Main theme variables */
+:root {
+  /* Primary accent colors */
+  --brand-experiment: #{{colors.primary.default.hex_stripped}};
+  --brand-experiment-560: #{{colors.primary.default.hex_stripped}};
+  --brand-experiment-600: #{{colors.primary.default.hex_stripped}};
+
+  /* Background colors */
+  --background-primary: #{{colors.surface.default.hex_stripped}};
+  --background-secondary: #{{colors.surface_container.default.hex_stripped}};
+  --background-secondary-alt: #{{colors.surface_container_low.default.hex_stripped}};
+  --background-tertiary: #{{colors.surface_container_lowest.default.hex_stripped}};
+  --background-accent: #{{colors.primary_container.default.hex_stripped}};
+  --background-floating: #{{colors.surface_container_high.default.hex_stripped}};
+  --background-nested-floating: #{{colors.surface_container_highest.default.hex_stripped}};
+  --background-mobile-primary: #{{colors.surface.default.hex_stripped}};
+  --background-mobile-secondary: #{{colors.surface_container.default.hex_stripped}};
+  --background-modifier-hover: #{{colors.surface_container_high.default.hex_stripped}};
+  --background-modifier-active: #{{colors.surface_container_highest.default.hex_stripped}};
+  --background-modifier-selected: #{{colors.surface_container_high.default.hex_stripped}};
+  --background-modifier-accent: #{{colors.outline_variant.default.hex_stripped}}40;
+
+  /* Chat/input backgrounds */
+  --channeltextarea-background: #{{colors.surface_container.default.hex_stripped}};
+  --input-background: #{{colors.surface_container_low.default.hex_stripped}};
+
+  /* Text colors */
+  --text-normal: #{{colors.on_surface.default.hex_stripped}};
+  --text-muted: #{{colors.on_surface_variant.default.hex_stripped}};
+  --text-link: #{{colors.primary.default.hex_stripped}};
+  --text-positive: #{{colors.tertiary.default.hex_stripped}};
+  --text-warning: #{{colors.secondary.default.hex_stripped}};
+  --text-danger: #{{colors.error.default.hex_stripped}};
+  --text-brand: #{{colors.primary.default.hex_stripped}};
+
+  /* Header colors */
+  --header-primary: #{{colors.on_surface.default.hex_stripped}};
+  --header-secondary: #{{colors.on_surface_variant.default.hex_stripped}};
+
+  /* Interactive elements */
+  --interactive-normal: #{{colors.on_surface_variant.default.hex_stripped}};
+  --interactive-hover: #{{colors.on_surface.default.hex_stripped}};
+  --interactive-active: #{{colors.on_surface.default.hex_stripped}};
+  --interactive-muted: #{{colors.outline.default.hex_stripped}};
+
+  /* Channels */
+  --channels-default: #{{colors.on_surface_variant.default.hex_stripped}};
+  --channel-icon: #{{colors.on_surface_variant.default.hex_stripped}};
+  --channel-text-area-placeholder: #{{colors.on_surface_variant.default.hex_stripped}};
+
+  /* Deprecated but still used */
+  --deprecated-card-bg: #{{colors.surface_container.default.hex_stripped}};
+  --deprecated-card-editable-bg: #{{colors.surface_container_low.default.hex_stripped}};
+  --deprecated-store-bg: #{{colors.surface.default.hex_stripped}};
+  --deprecated-quickswitcher-input-background: #{{colors.surface_container_low.default.hex_stripped}};
+  --deprecated-quickswitcher-input-placeholder: #{{colors.on_surface_variant.default.hex_stripped}};
+  --deprecated-text-input-bg: #{{colors.surface_container_low.default.hex_stripped}};
+  --deprecated-text-input-border: #{{colors.outline_variant.default.hex_stripped}};
+  --deprecated-text-input-border-hover: #{{colors.outline.default.hex_stripped}};
+  --deprecated-text-input-border-disabled: #{{colors.outline_variant.default.hex_stripped}};
+  --deprecated-text-input-prefix: #{{colors.on_surface_variant.default.hex_stripped}};
+
+  /* Activity card colors */
+  --activity-card-background: #{{colors.surface_container.default.hex_stripped}};
+
+  /* Button colors */
+  --button-danger-background: #{{colors.error.default.hex_stripped}};
+  --button-danger-background-hover: #{{colors.error_container.default.hex_stripped}};
+  --button-danger-background-active: #{{colors.error.default.hex_stripped}};
+  --button-danger-background-disabled: #{{colors.error_container.default.hex_stripped}};
+  --button-positive-background: #{{colors.tertiary.default.hex_stripped}};
+  --button-positive-background-hover: #{{colors.tertiary_container.default.hex_stripped}};
+  --button-positive-background-active: #{{colors.tertiary.default.hex_stripped}};
+  --button-positive-background-disabled: #{{colors.tertiary_container.default.hex_stripped}};
+  --button-secondary-background: #{{colors.surface_container_high.default.hex_stripped}};
+  --button-secondary-background-hover: #{{colors.surface_container_highest.default.hex_stripped}};
+  --button-secondary-background-active: #{{colors.surface_container_high.default.hex_stripped}};
+  --button-secondary-background-disabled: #{{colors.surface_container.default.hex_stripped}};
+  --button-outline-danger-text: #{{colors.on_error.default.hex_stripped}};
+  --button-outline-danger-border: #{{colors.error.default.hex_stripped}};
+  --button-outline-danger-background: transparent;
+  --button-outline-danger-background-hover: #{{colors.error_container.default.hex_stripped}};
+  --button-outline-danger-background-active: #{{colors.error.default.hex_stripped}};
+  --button-outline-danger-text-hover: #{{colors.on_error_container.default.hex_stripped}};
+  --button-outline-danger-text-active: #{{colors.on_error.default.hex_stripped}};
+  --button-outline-danger-border-hover: #{{colors.error.default.hex_stripped}};
+  --button-outline-danger-border-active: #{{colors.error.default.hex_stripped}};
+  --button-outline-positive-text: #{{colors.on_tertiary.default.hex_stripped}};
+  --button-outline-positive-border: #{{colors.tertiary.default.hex_stripped}};
+  --button-outline-positive-background: transparent;
+  --button-outline-positive-background-hover: #{{colors.tertiary_container.default.hex_stripped}};
+  --button-outline-positive-background-active: #{{colors.tertiary.default.hex_stripped}};
+  --button-outline-positive-text-hover: #{{colors.on_tertiary_container.default.hex_stripped}};
+  --button-outline-positive-text-active: #{{colors.on_tertiary.default.hex_stripped}};
+  --button-outline-positive-border-hover: #{{colors.tertiary.default.hex_stripped}};
+  --button-outline-positive-border-active: #{{colors.tertiary.default.hex_stripped}};
+  --button-outline-brand-text: #{{colors.on_primary.default.hex_stripped}};
+  --button-outline-brand-border: #{{colors.primary.default.hex_stripped}};
+  --button-outline-brand-background: transparent;
+  --button-outline-brand-background-hover: #{{colors.primary_container.default.hex_stripped}};
+  --button-outline-brand-background-active: #{{colors.primary.default.hex_stripped}};
+  --button-outline-brand-text-hover: #{{colors.on_primary_container.default.hex_stripped}};
+  --button-outline-brand-text-active: #{{colors.on_primary.default.hex_stripped}};
+  --button-outline-brand-border-hover: #{{colors.primary.default.hex_stripped}};
+  --button-outline-brand-border-active: #{{colors.primary.default.hex_stripped}};
+  --button-outline-primary-text: #{{colors.on_surface.default.hex_stripped}};
+  --button-outline-primary-border: #{{colors.outline.default.hex_stripped}};
+  --button-outline-primary-background: transparent;
+  --button-outline-primary-background-hover: #{{colors.surface_container_high.default.hex_stripped}};
+  --button-outline-primary-background-active: #{{colors.surface_container_highest.default.hex_stripped}};
+  --button-outline-primary-text-hover: #{{colors.on_surface.default.hex_stripped}};
+  --button-outline-primary-text-active: #{{colors.on_surface.default.hex_stripped}};
+  --button-outline-primary-border-hover: #{{colors.outline.default.hex_stripped}};
+  --button-outline-primary-border-active: #{{colors.outline.default.hex_stripped}};
+
+  /* Info colors */
+  --info-positive-background: #{{colors.tertiary_container.default.hex_stripped}};
+  --info-positive-foreground: #{{colors.on_tertiary_container.default.hex_stripped}};
+  --info-positive-text: #{{colors.on_tertiary_container.default.hex_stripped}};
+  --info-warning-background: #{{colors.secondary_container.default.hex_stripped}};
+  --info-warning-foreground: #{{colors.on_secondary_container.default.hex_stripped}};
+  --info-warning-text: #{{colors.on_secondary_container.default.hex_stripped}};
+  --info-danger-background: #{{colors.error_container.default.hex_stripped}};
+  --info-danger-foreground: #{{colors.on_error_container.default.hex_stripped}};
+  --info-danger-text: #{{colors.on_error_container.default.hex_stripped}};
+  --info-help-background: #{{colors.primary_container.default.hex_stripped}};
+  --info-help-foreground: #{{colors.on_primary_container.default.hex_stripped}};
+  --info-help-text: #{{colors.on_primary_container.default.hex_stripped}};
+
+  /* Status colors */
+  --status-positive-background: #{{colors.tertiary.default.hex_stripped}};
+  --status-positive-text: #{{colors.on_tertiary.default.hex_stripped}};
+  --status-warning-background: #{{colors.secondary.default.hex_stripped}};
+  --status-warning-text: #{{colors.on_secondary.default.hex_stripped}};
+  --status-danger-background: #{{colors.error.default.hex_stripped}};
+  --status-danger-text: #{{colors.on_error.default.hex_stripped}};
+  --status-danger: #{{colors.error.default.hex_stripped}};
+  --status-positive: #{{colors.tertiary.default.hex_stripped}};
+  --status-warning: #{{colors.secondary.default.hex_stripped}};
+
+  /* Mention colors */
+  --mention-foreground: #{{colors.primary.default.hex_stripped}};
+  --mention-background: #{{colors.primary.default.hex_stripped}}20;
+
+  /* Scrollbar */
+  --scrollbar-thin-thumb: #{{colors.primary.default.hex_stripped}};
+  --scrollbar-thin-track: transparent;
+  --scrollbar-auto-thumb: #{{colors.surface_container_highest.default.hex_stripped}};
+  --scrollbar-auto-track: #{{colors.surface_container_low.default.hex_stripped}};
+  --scrollbar-auto-scrollbar-color-thumb: #{{colors.surface_container_highest.default.hex_stripped}};
+  --scrollbar-auto-scrollbar-color-track: #{{colors.surface_container_low.default.hex_stripped}};
+
+  /* Elevation/shadows */
+  --elevation-stroke: #{{colors.outline_variant.default.hex_stripped}}20;
+  --elevation-low: 0 1px 0 #{{colors.shadow.default.hex_stripped}}20, 0 1.5px 0 #{{colors.shadow.default.hex_stripped}}15, 0 2px 0 #{{colors.shadow.default.hex_stripped}}10;
+  --elevation-medium: 0 4px 4px #{{colors.shadow.default.hex_stripped}}20, 0 2px 2px #{{colors.shadow.default.hex_stripped}}20;
+  --elevation-high: 0 8px 16px #{{colors.shadow.default.hex_stripped}}30;
+
+  /* Modal */
+  --modal-background: #{{colors.surface_container.default.hex_stripped}};
+  --modal-footer-background: #{{colors.surface_container_low.default.hex_stripped}};
+
+  /* Profile */
+  --profile-body-background-color: #{{colors.surface_container.default.hex_stripped}};
+
+  /* Focus ring */
+  --focus-primary: #{{colors.primary.default.hex_stripped}};
+
+  /* Control brand colors */
+  --control-brand-foreground: #{{colors.primary.default.hex_stripped}};
+  --control-brand-foreground-new: #{{colors.primary.default.hex_stripped}};
+
+  /* White (used for text on colored backgrounds) */
+  --white-500: #{{colors.on_primary.default.hex_stripped}};
+
+  /* Home/Guild icon colors */
+  --home-background: #{{colors.surface_container.default.hex_stripped}};
+  --guild-header-text-shadow: 0 1px 1px #{{colors.shadow.default.hex_stripped}}40;
+}
+
+/* Server list background */
+.guilds_a4d4d9 {
+  background-color: #{{colors.surface_container_lowest.default.hex_stripped}} !important;
+}
+
+/* Channel list background */
+.sidebar_a4d4d9 {
+  background-color: #{{colors.surface_container_low.default.hex_stripped}} !important;
+}
+
+/* Members list background */
+.container_b2ca13 {
+  background-color: #{{colors.surface_container_low.default.hex_stripped}} !important;
+}
+
+/* Chat area background */
+.chat_a7d72e {
+  background-color: #{{colors.surface.default.hex_stripped}} !important;
+}
+
+/* Message hover */
+.message_d5deea:hover {
+  background-color: #{{colors.surface_container.default.hex_stripped}} !important;
+}
+
+/* Selected server indicator */
+.pill_c6d96e[data-list-item-id] > span {
+  background-color: #{{colors.primary.default.hex_stripped}} !important;
+}
+
+/* Unread indicator */
+.unread_c6d96e {
+  background-color: #{{colors.primary.default.hex_stripped}} !important;
+}
+
+/* Folder selected/expanded */
+.expandedFolderBackground_bc7085 {
+  background-color: #{{colors.surface_container.default.hex_stripped}} !important;
+}
+
+/* Title bar */
+.titleBar_a934d8 {
+  background-color: #{{colors.surface_container_lowest.default.hex_stripped}} !important;
+}
+
+/* Settings sidebar */
+.sidebarRegion_c25c6d {
+  background-color: #{{colors.surface_container_low.default.hex_stripped}} !important;
+}
+
+/* Settings content */
+.contentRegion_c25c6d {
+  background-color: #{{colors.surface.default.hex_stripped}} !important;
+}
+
+/* Search bar */
+.searchBar_e0840f {
+  background-color: #{{colors.surface_container.default.hex_stripped}} !important;
+}
+
+/* User panel at bottom */
+.panels_a4d4d9 {
+  background-color: #{{colors.surface_container_low.default.hex_stripped}} !important;
+}
+
+/* Voice connected panel */
+.panel_bd8c76 {
+  background-color: #{{colors.surface_container.default.hex_stripped}} !important;
+}
+
+/* Popout/tooltip backgrounds */
+.layerContainer_cd0de5 .layer_cd0de5 {
+  background-color: transparent !important;
+}
+
+/* Emoji picker */
+.contentWrapper_af5dbb {
+  background-color: #{{colors.surface_container.default.hex_stripped}} !important;
+}
+
+/* Context menus */
+.menu_d90b3d {
+  background-color: #{{colors.surface_container_high.default.hex_stripped}} !important;
+}
+
+/* Autocomplete */
+.autocomplete_f23da8 {
+  background-color: #{{colors.surface_container_high.default.hex_stripped}} !important;
+}
+
+/* Nitro/store pages */
+.applicationStore_cecc86,
+.tierBody_af7bf7 {
+  background-color: #{{colors.surface.default.hex_stripped}} !important;
+}
+
+/* Code blocks */
+.markup_f8f345 code {
+  background-color: #{{colors.surface_container_low.default.hex_stripped}} !important;
+  border-color: #{{colors.outline_variant.default.hex_stripped}} !important;
+}
+
+.markup_f8f345 pre {
+  background-color: #{{colors.surface_container_low.default.hex_stripped}} !important;
+  border-color: #{{colors.outline_variant.default.hex_stripped}} !important;
+}
+
+/* Embeds */
+.embedFull_b0068a {
+  background-color: #{{colors.surface_container.default.hex_stripped}} !important;
+  border-left-color: #{{colors.primary.default.hex_stripped}} !important;
+}
+
+/* Reactions */
+.reaction_ec6b19 {
+  background-color: #{{colors.surface_container.default.hex_stripped}} !important;
+}
+
+.reaction_ec6b19:hover {
+  background-color: #{{colors.surface_container_high.default.hex_stripped}} !important;
+}
+
+/* Reply bar */
+.replyBar_e2c3b5 {
+  background-color: #{{colors.surface_container.default.hex_stripped}} !important;
+}
+
+/* Thread container */
+.container_d331f1 {
+  background-color: #{{colors.surface_container.default.hex_stripped}} !important;
+}
+
+/* New messages bar */
+.newMessagesBar_cf58b5 {
+  background-color: #{{colors.primary.default.hex_stripped}} !important;
+  color: #{{colors.on_primary.default.hex_stripped}} !important;
+}
+
+/* Jump to present bar */
+.jumpToPresentBar_cf58b5 {
+  background-color: #{{colors.primary.default.hex_stripped}} !important;
+  color: #{{colors.on_primary.default.hex_stripped}} !important;
+}
+
+/* Dividers */
+.divider_d5deea {
+  border-color: #{{colors.outline_variant.default.hex_stripped}} !important;
+}
+
+/* Boost progress bar */
+.tierHeaderProgress_f294ba .background_f294ba {
+  background-color: #{{colors.surface_container_high.default.hex_stripped}} !important;
+}
+
+.tierHeaderProgress_f294ba .foreground_f294ba {
+  background-color: #{{colors.primary.default.hex_stripped}} !important;
+}
