@@ -116,11 +116,11 @@ hi("Ignore", { fg = colors.fg_muted })
 hi("Error", { fg = colors.error })
 hi("Todo", { fg = colors.bg, bg = colors.primary, bold = true })
 
--- Diff
-hi("DiffAdd", { bg = "#{{colors.tertiary.default.hex_stripped}}22" })
-hi("DiffChange", { bg = "#{{colors.secondary.default.hex_stripped}}22" })
-hi("DiffDelete", { fg = colors.error, bg = "#{{colors.error.default.hex_stripped}}22" })
-hi("DiffText", { bg = "#{{colors.secondary.default.hex_stripped}}44" })
+-- Diff (using subtle background colors for better visibility)
+hi("DiffAdd", { bg = colors.bg_highlight, fg = colors.green })
+hi("DiffChange", { bg = colors.bg_highlight, fg = colors.yellow })
+hi("DiffDelete", { fg = colors.error, bg = colors.bg_highlight })
+hi("DiffText", { bg = colors.bg_alt, fg = colors.secondary, bold = true })
 
 -- Diagnostics
 hi("DiagnosticError", { fg = colors.error })

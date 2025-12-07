@@ -1,9 +1,9 @@
 [config]
 
-# [config.wallpaper]
-# command = "swww"
-# arguments = ["img", "--transition-type", "center"]
-# set = false
+[config.wallpaper]
+command = "swww"
+arguments = ["img", "--transition-type", "wave", "--transition-step", "10", "--transition-angle", "45", "--transition-duration", "2", "--transition-fps", "144"]
+set = true
 
 [templates.rofi]
 input_path = "./templates/rofi.rasi"
@@ -62,6 +62,7 @@ post_hook = 'swaync-client -rs'
 [templates.swayosd]
 input_path = './templates/swayosd.css'
 output_path = '~/.config/swayosd/style.css'
+post_hook = 'pkill swayosd-server 2>/dev/null; sleep 0.3; nohup swayosd-server > /dev/null 2>&1 &'
 
 [templates.obsidian]
 input_path = './templates/obsidian.css'
@@ -70,7 +71,6 @@ output_path = '~/Projects/Notes/.obsidian/snippets/matugen.css'
 [templates.zen]
 input_path = './templates/zen.css'
 output_path = '~/.zen/icbf5wlx.Default (release)/chrome/matugen.css'
-post_hook = 'notify-send "Matugen" "Zen browser theme updated. Please restart Zen to see changes." -u normal'
 
 [templates.nvim]
 input_path = './templates/nvim.lua'

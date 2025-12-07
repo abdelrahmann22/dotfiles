@@ -7,7 +7,7 @@
 
 /* Control Center Panel */
 .control-center {
-  background: alpha(#{{colors.surface.default.hex_stripped}}, 0.95);
+  background: alpha(#{{colors.surface.default.hex_stripped}}, 0.85);
   border-radius: 8px;
   padding: 12px;
   margin: 8px;
@@ -344,7 +344,7 @@ scrollbar slider:hover {
 }
 
 .notification {
-  background: alpha(#{{colors.surface.default.hex_stripped}}, 0.95);
+  background: alpha(#{{colors.surface.default.hex_stripped}}, 0.85);
   border-radius: 8px;
   margin: 6px 0;
   padding: 0;
@@ -386,7 +386,7 @@ scrollbar slider:hover {
 }
 
 .notification-row .notification-background {
-  background: alpha(#{{colors.surface.default.hex_stripped}}, 0.95);
+  background: alpha(#{{colors.surface.default.hex_stripped}}, 0.85);
   border-radius: 8px;
   margin: 6px 0;
   border: 1px solid alpha(#{{colors.primary.default.hex_stripped}}, 0.3);
