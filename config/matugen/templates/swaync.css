@@ -12,7 +12,7 @@
   padding: 12px;
   margin: 8px;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
-  border: none;
+  border: 1px solid alpha(#{{colors.primary.default.hex_stripped}}, 0.3);
 }
 
 .control-center .widget {
@@ -348,7 +348,7 @@ scrollbar slider:hover {
   border-radius: 8px;
   margin: 6px 0;
   padding: 0;
-  border: none;
+  border: 1px solid alpha(#{{colors.primary.default.hex_stripped}}, 0.3);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -389,7 +389,7 @@ scrollbar slider:hover {
   background: alpha(#{{colors.surface.default.hex_stripped}}, 0.95);
   border-radius: 8px;
   margin: 6px 0;
-  border: none;
+  border: 1px solid alpha(#{{colors.primary.default.hex_stripped}}, 0.3);
 }
 
 .notification-row .notification-background .notification {
