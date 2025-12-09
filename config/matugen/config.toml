@@ -2,7 +2,8 @@
 
 [config.wallpaper]
 command = "swww"
-arguments = ["img", "--transition-type", "wave", "--transition-step", "10", "--transition-angle", "45", "--transition-duration", "2", "--transition-fps", "144"]
+# Apply to every detected output; swww otherwise targets only the focused one.
+arguments = ["img", "--outputs", "all", "--transition-type", "wave", "--transition-step", "10", "--transition-angle", "45", "--transition-duration", "2", "--transition-fps", "144"]
 set = true
 
 [templates.rofi]
