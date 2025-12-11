@@ -38,7 +38,6 @@
     "backlight",
     "volume",
     "notifications",
-    "mpris",
     "dnd"
   ],
   "widget-config": {
@@ -131,11 +130,6 @@
       "empty-list-label": "No audio",
       "expand-button-label": "Apps",
       "collapse-button-label": "Apps"
-    },
-    "mpris": {
-      "image-size": 40,
-      "image-radius": 8,
-      "blur": true
     }
   }
 }
