@@ -1,7 +1,5 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local lspconfig = require "lspconfig"
-
 local servers = { "html", "cssls", "pyright", "qmlls" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
@@ -16,10 +14,10 @@ for _, lsp in ipairs(servers) do
     opts.cmd = { "qmlls6" }
   end
 
-  lspconfig[lsp].setup(opts)
+  vim.lsp.config(lsp, opts)
 end
 
-lspconfig.pyright.setup {
+vim.lsp.config("pyright", {
   on_attach = nvlsp.on_attach,
   on_init = nvlsp.on_init,
   capabilities = nvlsp.capabilities,
@@ -32,4 +30,4 @@ lspconfig.pyright.setup {
       },
     },
   },
-}
+})
