@@ -58,6 +58,7 @@ configs=(
     "kanshi"
     "kitty"
     "matugen"
+    "nvim"
     "rofi"
     "swaync"
     "swayosd"
