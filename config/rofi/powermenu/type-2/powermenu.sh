@@ -7,6 +7,9 @@ theme='style-5'
 # CMDs
 uptime="`uptime -p | sed -e 's/up //g'`"
 host=`hostname`
+user=$(whoami | sed 's/\b\(.\)/\u\1/g')
+current_time=`date +"%I:%M %p"`
+current_date=`date +"%b %d, %Y"`
 
 # Options
 shutdown=''
@@ -20,8 +23,9 @@ no=''
 # Rofi CMD
 rofi_cmd() {
 	rofi -dmenu \
-		-p "Uptime: $uptime" \
-		-mesg "Uptime: $uptime" \
+		-p "" \
+		-mesg "<span size='large' weight='bold'>$user</span>              <span size='large' weight='bold'> $current_time</span>
+                               <span size='medium'>$current_date</span>" \
 		-theme ${dir}/${theme}.rasi
 }
 
