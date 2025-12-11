@@ -10,6 +10,7 @@ profile lid-closed {
     }
 
     exec ~/.config/waybar/scripts/launch-waybar.sh
+    exec ~/.config/hypr/scripts/focus-hdmi.sh
 }
 
 profile dual-monitor {
