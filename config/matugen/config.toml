@@ -10,6 +10,14 @@ set = true
 input_path = "./templates/rofi.rasi"
 output_path = "~/.config/rofi/colors/matugen.rasi"
 
+[templates.rofi-screenshot]
+input_path = "./templates/screenshot-gnome.rasi"
+output_path = "~/.config/rofi/screenshot-gnome.rasi"
+
+[templates.rofi-search]
+input_path = "./templates/rofi-search.rasi"
+output_path = "~/.config/rofi/search/colors-matugen.rasi"
+
 [templates.kitty]
 input_path = './templates/kitty.conf'
 output_path = '../kitty/themes/matugen.conf'
@@ -60,23 +68,14 @@ input_path = './templates/swaync.css'
 output_path = '~/.config/swaync/style.css'
 post_hook = 'swaync-client -rs'
 
-[templates.swayosd]
-input_path = './templates/swayosd.css'
-output_path = '~/.config/swayosd/style.css'
-post_hook = 'pkill swayosd-server 2>/dev/null; sleep 0.3; nohup swayosd-server > /dev/null 2>&1 &'
-
 [templates.obsidian]
 input_path = './templates/obsidian.css'
 output_path = '~/Projects/Notes/.obsidian/snippets/matugen.css'
 
-[templates.zen]
-input_path = './templates/zen.css'
-output_path = '~/.zen/icbf5wlx.Default (release)/chrome/matugen.css'
-
 [templates.nvim]
 input_path = "./templates/nvim.lua"
 output_path = "~/.cache/wal/base46-dark.lua"
-post_hook = "mkdir -p ~/.local/share/nvim/lazy/base46/lua/base46/themes && ln -sf ~/.cache/wal/base46-dark.lua ~/.local/share/nvim/lazy/base46/lua/base46/themes/chadwal.lua"
+post_hook = "mkdir -p ~/.local/share/nvim/lazy/base46/lua/base46/themes && ln -sf ~/.cache/wal/base46-dark.lua ~/.local/share/nvim/lazy/base46/lua/base46/themes/chadwal.lua && ~/.config/matugen/scripts/compile-nvim-theme.sh"
 
 [templates.nvimlight]
 input_path = "./templates/nvim.lua"
@@ -94,19 +93,6 @@ output_path = '~/.var/app/com.discordapp.Discord/config/Vencord/themes/midnight-
 [templates.yazi]
 input_path = "./templates/yazi.toml"
 output_path = "~/.config/yazi/theme.toml"
-
-[templates.spicetify-color]
-input_path = './templates/spicetify-color.ini'
-output_path = '~/.config/spicetify/Themes/matugen/color.ini'
-
-[templates.spicetify-css]
-input_path = './templates/spicetify-user.css'
-output_path = '~/.config/spicetify/Themes/matugen/user.css'
-
-[templates.spicetify-dribbblish]
-input_path = './templates/spicetify-dribbblish.ini'
-output_path = '~/.config/spicetify/Themes/Dribbblish/color.ini'
-post_hook = './scripts/spicetify.sh'
 
 [templates.vesktop]
 input_path = './templates/vesktop-midnight-discord.css'
