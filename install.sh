@@ -61,7 +61,6 @@ configs=(
     "nvim"
     "rofi"
     "swaync"
-    "swayosd"
     "waybar"
     "waypaper"
 )
@@ -92,7 +91,7 @@ fi
 echo ""
 log_info "Required packages:"
 echo "  - hyprland, hyprpaper, hypridle, hyprlock"
-echo "  - waybar, swaync, swayosd"
+echo "  - waybar, swaync"
 echo "  - rofi, kitty"
 echo "  - cava, fastfetch"
 echo "  - kanshi"
