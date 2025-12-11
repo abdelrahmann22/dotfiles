@@ -74,13 +74,68 @@ input_path = './templates/zen.css'
 output_path = '~/.zen/icbf5wlx.Default (release)/chrome/matugen.css'
 
 [templates.nvim]
-input_path = './templates/nvim.lua'
-output_path = '~/.config/nvim/colors/matugen.lua'
+input_path = "./templates/nvim.lua"
+output_path = "~/.cache/wal/base46-dark.lua"
+post_hook = "mkdir -p ~/.local/share/nvim/lazy/base46/lua/base46/themes && ln -sf ~/.cache/wal/base46-dark.lua ~/.local/share/nvim/lazy/base46/lua/base46/themes/chadwal.lua"
+
+[templates.nvimlight]
+input_path = "./templates/nvim.lua"
+output_path = "~/.cache/wal/base46-light.lua"
+post_hook = "mkdir -p ~/.local/share/nvim/lazy/base46/lua/base46/themes && ln -sf ~/.cache/wal/base46-light.lua ~/.local/share/nvim/lazy/base46/lua/base46/themes/chadwal-light.lua"
 
 [templates.discord]
-input_path = './templates/discord.css'
-output_path = '~/.config/Vencord/themes/matugen.theme.css'
+input_path = './templates/midnight-discord.css'
+output_path = '~/.config/Vencord/themes/midnight-discord.css'
 
 [templates.discord-flatpak]
-input_path = './templates/discord.css'
-output_path = '~/.var/app/com.discordapp.Discord/config/Vencord/themes/matugen.theme.css'
+input_path = './templates/midnight-discord.css'
+output_path = '~/.var/app/com.discordapp.Discord/config/Vencord/themes/midnight-discord.css'
+
+[templates.yazi]
+input_path = "./templates/yazi.toml"
+output_path = "~/.config/yazi/theme.toml"
+
+[templates.spicetify-color]
+input_path = './templates/spicetify-color.ini'
+output_path = '~/.config/spicetify/Themes/matugen/color.ini'
+
+[templates.spicetify-css]
+input_path = './templates/spicetify-user.css'
+output_path = '~/.config/spicetify/Themes/matugen/user.css'
+
+[templates.spicetify-dribbblish]
+input_path = './templates/spicetify-dribbblish.ini'
+output_path = '~/.config/spicetify/Themes/Dribbblish/color.ini'
+post_hook = './scripts/spicetify.sh'
+
+[templates.vesktop]
+input_path = './templates/vesktop-midnight-discord.css'
+output_path = '~/.var/app/dev.vencord.Vesktop/config/vesktop/themes/themes.css'
+
+[config.custom_colors.red]
+color = "#FF0000"
+blend = true
+
+[config.custom_colors.green]
+color = "#00FF00"
+blend = true
+
+[config.custom_colors.yellow]
+color = "#FFFF00"
+blend = true
+
+[config.custom_colors.blue]
+color = "#0000FF"
+blend = true
+
+[config.custom_colors.magenta]
+color = "#FF00FF"
+blend = true
+
+[config.custom_colors.cyan]
+color = "#00FFFF"
+blend = true
+
+[config.custom_colors.white]
+color = "#FFFFFF"
+blend = true
