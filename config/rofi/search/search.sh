@@ -6,7 +6,7 @@ theme='search-style'
 ## Run rofi with combi mode for universal search (Flow Launcher style)
 rofi \
     -show combi \
-    -combi-modes "drun,filebrowser" \
+    -combi-modes "drun,folders:${dir}/folders.sh" \
     -theme ${dir}/${theme}.rasi \
     -matching normal \
     -sorting-method fzf \
