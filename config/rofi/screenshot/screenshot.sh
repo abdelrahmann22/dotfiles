@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-dir="$HOME/.config/rofi"
+dir="$HOME/.config/rofi/screenshot"
 theme='screenshot-gnome'
-quality_wrapper="$HOME/.config/rofi/screenshot/hyprshot-quality.sh"
 
 # Screenshot options with clean GNOME-style text
 options="󰍹
@@ -12,17 +11,17 @@ options="󰍹
 # Show menu with GNOME-style theme
 selected=$(echo "$options" | rofi -dmenu -i -mesg "Take a Screenshot" -theme ${dir}/${theme}.rasi -format 's')
 
-# Execute screenshot based on selection with maximum quality
+# Execute screenshot based on selection
 if [ -n "$selected" ]; then
     case "$selected" in
         "󰍹")
-            "$quality_wrapper" output
+            hyprshot -m output
             ;;
         "󰖯")
-            "$quality_wrapper" window
+            hyprshot -m window
             ;;
         "󱣴")
-            "$quality_wrapper" region
+            hyprshot -m region
             ;;
     esac
 fi
