@@ -1,9 +1,51 @@
-require "nvchad.options"
+-- Options for LazyVim
 
--- add yours here!
+local opt = vim.opt
 
-local o = vim.o
-o.cursorlineopt ='both' -- to enable cursorline!
+-- Line numbers
+opt.number = true
+opt.relativenumber = true
 
--- set noundofile
-vim.opt.undofile = false
+-- Tabs and indentation
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
+opt.autoindent = true
+opt.smartindent = true
+
+-- Line wrapping
+opt.wrap = false
+
+-- Search settings
+opt.ignorecase = true
+opt.smartcase = true
+
+-- Cursor line
+opt.cursorline = true
+opt.cursorlineopt = 'both'
+
+-- Appearance
+opt.termguicolors = true
+opt.background = "dark"
+opt.signcolumn = "yes"
+
+-- Backspace
+opt.backspace = "indent,eol,start"
+
+-- Clipboard
+opt.clipboard:append("unnamedplus")
+
+-- Split windows
+opt.splitright = true
+opt.splitbelow = true
+
+-- Undo
+opt.undofile = false
+
+-- Others
+opt.iskeyword:append("-")
+opt.mouse = "a"
+opt.scrolloff = 8
+opt.sidescrolloff = 8
+opt.updatetime = 300
+opt.timeoutlen = 400

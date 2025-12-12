@@ -1,8 +1,11 @@
-require "nvchad.mappings"
-
--- add yours here
+-- Custom keymaps for LazyVim
 
 local map = vim.keymap.set
+
+-- Better defaults
+map("n", "<Esc>", "<cmd>nohlsearch<CR>", { desc = "Clear search highlights" })
+
+-- LazyVim already provides most default mappings, these are additions
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 

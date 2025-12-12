@@ -1,3 +1,6 @@
+-- Conform.nvim configuration for LazyVim
+-- LazyVim handles format_on_save automatically, so we only define formatters
+
 local options = {
   formatters_by_ft = {
     python = { "isort", "black" },
@@ -8,11 +11,8 @@ local options = {
     html = { "prettier" },
   },
 
-  format_on_save = {
-    -- These options will be passed to conform.format()
-    timeout_ms = 500,
-    lsp_fallback = true,
-  },
+  -- LazyVim will handle format_on_save automatically
+  -- Don't set it here to avoid conflicts
 }
 
 return options

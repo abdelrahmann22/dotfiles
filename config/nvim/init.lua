@@ -1,57 +1,91 @@
 --[[
 ┌──────────────────────────────────┐
 │                                  │
-│     ░█▀█░█▀▀░█▀█░█░█░▀█▀░█▄█     │
-│     ░█░█░█▀▀░█░█░▀▄▀░░█░░█░█     │
-│     ░▀░▀░▀▀▀░▀▀▀░░▀░░▀▀▀░▀░▀     │
+│     ░█░░░█▀█░▀▀█░█░█░█░█░▀█▀░█▄█ │
+│     ░█░░░█▀█░▄▀░░░█░░▀▄▀░░█░░█░█ │
+│     ░▀▀▀░▀░▀░▀▀▀░░▀░░░▀░░▀▀▀░▀░▀ │
 │                                  │
 └──────────────────────────────────┘
 ]]
---
 
-vim.g.base46_cache = vim.fn.stdpath "data" .. "/nvchad/base46/"
+-- Set leader key before anything else
 vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
--- bootstrap lazy and all plugins
-local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
-
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.uv.fs_stat(lazypath) then
   local repo = "https://github.com/folke/lazy.nvim.git"
-  vim.fn.system { "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath }
+  vim.fn.system({ "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath })
 end
-
 vim.opt.rtp:prepend(lazypath)
 
-local lazy_config = require "configs.lazy"
+-- Load options first
+require("options")
 
--- load plugins
+-- Setup lazy.nvim with LazyVim
 require("lazy").setup({
   {
-    "NvChad/NvChad",
-    lazy = false,
-    branch = "v2.5",
-    import = "nvchad.plugins",
+    "LazyVim/LazyVim",
+    import = "lazyvim.plugins",
+    opts = {
+      colorscheme = "matugen",
+      -- Disable default colorschemes
+      news = {
+        lazyvim = true,
+        neovim = true,
+      },
+    },
   },
 
+  -- Import custom plugins
   { import = "plugins" },
-}, lazy_config)
+}, {
+  defaults = {
+    lazy = false,
+    version = false,
+  },
+  install = { colorscheme = { "matugen", "tokyonight", "habamax" } },
+  checker = { enabled = true },
+  performance = {
+    rtp = {
+      disabled_plugins = {
+        "gzip",
+        "tarPlugin",
+        "tohtml",
+        "tutor",
+        "zipPlugin",
+      },
+    },
+  },
+})
 
--- load theme
-pcall(dofile, vim.g.base46_cache .. "defaults")
-pcall(dofile, vim.g.base46_cache .. "statusline")
-
-require "options"
-require "nvchad.autocmds"
-
+-- Load mappings
 vim.schedule(function()
-  require "mappings"
+  pcall(require, "mappings")
 end)
 
+-- Setup matugen colorscheme auto-reload
 local autocmd = vim.api.nvim_create_autocmd
 
 autocmd("Signal", {
   pattern = "SIGUSR1",
   callback = function()
-    require("nvchad.utils").reload()
+    vim.cmd("colorscheme matugen")
+    vim.cmd("redraw!")
   end,
+  desc = "Reload matugen colorscheme on wallpaper change",
 })
+
+-- Auto-reload colorscheme when file changes
+autocmd("BufWritePost", {
+  pattern = "*/colors/matugen.lua",
+  callback = function()
+    vim.cmd("colorscheme matugen")
+    vim.cmd("redraw!")
+  end,
+  desc = "Auto-reload matugen colorscheme on file save",
+})
+
+-- Apply colorscheme
+vim.cmd.colorscheme("matugen")
