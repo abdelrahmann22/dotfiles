@@ -17,13 +17,13 @@ configuration {
 @import "colors/matugen.rasi"
 
 * {
-    font:                        "feather bold 48";
+    font:                        "feather bold 56";
     background-color:            transparent;
     text-color:                  @foreground;
     
-    background:                  #000000ee;
-    button-bg:                   #0e1415ee;
-    border-color-custom:         #2a2a2a80;
+    background:                  #000000bb;
+    button-bg:                   #ffffff15;
+    border-color-custom:         #ffffff20;
 }
 
 /*****----- Main Window -----*****/
@@ -88,8 +88,8 @@ listview {
 element {
     enabled:                     true;
     spacing:                     0px;
-    padding:                     2px;
-    border-radius:               10px;
+    padding:                     0px 0px;
+    border-radius:               16px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      pointer;
@@ -107,7 +107,7 @@ element selected.normal {
 }
 
 element-text {
-    font:                        "feather bold 48";
+    font:                        "feather bold 56";
     background-color:            transparent;
     text-color:                  inherit;
     vertical-align:              0.5;
