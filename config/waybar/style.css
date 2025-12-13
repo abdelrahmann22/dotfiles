@@ -86,6 +86,10 @@ window#waybar {
   opacity: 0.7;
 }
 
+#window * {
+  font-size:10px;
+}
+
 /* Clock - centered, minimal */
 #clock {
   margin-left: 8.75px;
