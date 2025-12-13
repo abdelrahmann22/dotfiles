@@ -9,16 +9,17 @@ format=<b>%s</b>\n%b
 markup=1
 
 # Colors with transparency (like Rofi search)
-background-color=#{{colors.surface.default.hex_stripped}}F0
-text-color=#{{colors.on_surface.default.hex_stripped}}
+# on_surface color automatically adjusts: black on bright backgrounds, white on dark backgrounds
+background-color=#0e1415CC
+text-color=#dee4e4
 
-# Subtle border (like Rofi search bar)
+# Subtle border (same as notification background)
 border-size=1
-border-radius=10
-border-color=#{{colors.surface_bright.default.hex_stripped}}80
+border-radius=12
+border-color=#343a3b80
 
 # Progress bar
-progress-color=over #{{colors.secondary.default.hex_stripped}}
+progress-color=over #b1cbcf
 
 # ============================
 # Layout & Dimensions
@@ -32,14 +33,14 @@ icon-location=left
 # ============================
 # Icons
 # ============================
-icon-path=/usr/share/icons/MacTahoe
+icon-path=/usr/share/icons/Papirus-Dark
 max-icon-size=48
 icons=1
 
 # ============================
 # Behavior
 # ============================
-default-timeout=1500
+default-timeout=2000
 ignore-timeout=0
 layer=overlay
 anchor=top-right
@@ -57,35 +58,53 @@ history=1
 
 # Low urgency - very brief
 [urgency=low]
-background-color=#{{colors.surface.default.hex_stripped}}E6
+background-color=#0e1415CC
+text-color=#dee4e4
 default-timeout=1500
 
 # Normal urgency - 2 seconds (rofi-style)
 [urgency=normal]
-background-color=#{{colors.surface.default.hex_stripped}}F0
+background-color=#0e1415CC
+text-color=#dee4e4
 default-timeout=2000
 
 # Critical urgency - stays until dismissed
 [urgency=critical]
-background-color=#{{colors.error_container.default.hex_stripped}}F0
-text-color=#{{colors.on_error_container.default.hex_stripped}}
+background-color=#93000aCC
+text-color=#ffdad6
 default-timeout=2000
-ignore-timeout=1
+ignore-timeout=0
 
 # ============================
 # Application-Specific Styling
 # ============================
 
 # Music/Media - brief display
-[app-name="Spotify"]
+[app-name="spotify"]
 default-timeout=2000
 
 [app-name="playerctl"]
 default-timeout=2000
 
-# Volume/Brightness - very brief
+# Volume/Brightness - very brief, positioned lower on screen
+# Text color: static dark gray for contrast on all color schemes
 [app-name="volume"]
+background-color=#0e1415F0
+text-color=#3b3b3b
+font=JetBrainsMono Nerd Font 12
 default-timeout=1000
-
+width=400
+height=35
+padding=7, 15
+outer-margin=0,0,30,0
+anchor=bottom-center
 [app-name="brightness"]
+background-color=#0e1415F0
+text-color=#3b3b3b
+font=JetBrainsMono Nerd Font 12
 default-timeout=1000
+width=400
+height=35
+padding=7, 15
+outer-margin=0,0,30,0
+anchor=bottom-center
