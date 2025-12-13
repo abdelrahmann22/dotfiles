@@ -7,7 +7,7 @@ killall waybar 2>/dev/null
 sleep 0.1
 
 CONFIG_DIR="$HOME/.config/waybar"
-TEMP_CONFIG="/tmp/waybar-config.jsonc"
+TEMP_CONFIG="/tmp/waybar-config-$$.jsonc"
 
 # Check if HDMI-A-1 is connected
 if hyprctl monitors | grep -q "HDMI-A-1"; then
