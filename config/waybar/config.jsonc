@@ -80,7 +80,7 @@
     "format": "",
     "return-type": "json",
     "exec": "~/.config/waybar/scripts/check-updates-fedora.sh",
-    "on-click": "gnome-software --mode=updates&",
+    "on-click": "kitty --class floating-updates --title 'Update Center' -e ~/.config/hypr/scripts/update-center.sh",
     "on-click-right": "gnome-software &",
     "tooltip": true,
     "signal": 8,
