@@ -1,0 +1,52 @@
+[general]
+# Start in floating window mode (not fullscreen)
+fullscreen = false
+
+# Exit directly after saving the image
+early-exit = false
+
+# Save after copying to clipboard
+save-after-copy = true
+
+# Show tooltips
+show-tooltips = true
+
+# Default output filename pattern (will be overridden by script)
+output-filename = "~/Pictures/Screenshots/Screenshot_%Y%m%d_%H%M%S.png"
+
+# Copy to clipboard after saving
+copy-command = "wl-copy"
+
+# Default annotation color (hex color)
+annotation-color = "#ff0000"
+
+# Default font
+font-family = "Roboto"
+
+# Default font size
+font-size = 24
+
+# Default line width
+line-width = 4
+
+[keybindings]
+# Keybindings for various actions
+# Format: action = "key"
+
+# Drawing tools
+tool-line = "l"
+tool-arrow = "a"
+tool-rectangle = "r"
+tool-text = "t"
+tool-marker = "m"
+tool-blur = "b"
+tool-crop = "c"
+tool-pointer = "p"
+
+# Actions
+undo = "z"
+redo = "y"
+save = "Return"
+copy = "c"
+toggle-fullscreen = "F11"
+cancel = "Escape"

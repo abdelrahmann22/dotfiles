@@ -11,17 +11,17 @@ options="󰍹
 # Show menu with GNOME-style theme
 selected=$(echo "$options" | rofi -dmenu -i -mesg "Take a Screenshot" -theme ${dir}/${theme}.rasi -format 's')
 
-# Execute screenshot based on selection
+# Execute screenshot based on selection - all open with satty for annotation
 if [ -n "$selected" ]; then
     case "$selected" in
         "󰍹")
-            hyprshot -m output
+            ~/.config/hypr/scripts/screenshot-annotate.sh output
             ;;
         "󰖯")
-            hyprshot -m window
+            ~/.config/hypr/scripts/screenshot-annotate.sh window
             ;;
         "󱣴")
-            hyprshot -m region
+            ~/.config/hypr/scripts/screenshot-annotate.sh region
             ;;
     esac
 fi
