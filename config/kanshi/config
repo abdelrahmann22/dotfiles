@@ -1,3 +1,20 @@
+profile dual-monitor {
+    output eDP-1 {
+        enable
+        mode 1920x1080@60
+        position 1920,0
+        scale 1.25
+    }
+    output HDMI-A-1 {
+        enable
+        mode 1920x1080@100
+        position 0,0
+        scale 1
+    }
+
+    exec ~/.config/waybar/scripts/launch-waybar.sh
+    exec hyprctl dispatch focusmonitor HDMI-A-1 || true
+}
 profile lid-closed {
     output HDMI-A-1 {
         enable
@@ -10,26 +27,7 @@ profile lid-closed {
     }
 
     exec ~/.config/waybar/scripts/launch-waybar.sh
-    exec ~/.config/hypr/scripts/focus-hdmi.sh
 }
-
-profile dual-monitor {
-    output eDP-1 {
-        enable
-        mode 1920x1080@60
-        position 0,0
-        scale 1.25
-    }
-    output HDMI-A-1 {
-        enable
-        mode 1920x1080@100
-        position 1535,0
-        scale 1
-    }
-
-    exec ~/.config/waybar/scripts/launch-waybar.sh
-}
-
 
 
 profile laptop-only {
