@@ -22,5 +22,12 @@ flock -n 9 || exit 0
 # Run matugen to generate colors (template generation)
 matugen image --type "$MATUGEN_TYPE" "$WALLPAPER_PATH"
 
+# Update hyprpaper.conf so wallpaper persists after logout
+cat > "$HOME/.config/hypr/hyprpaper.conf" << EOF
+preload = $WALLPAPER_PATH
+
+wallpaper = ,$WALLPAPER_PATH
+EOF
+
 # Now reload all apps in background (non-blocking)
 "$SCRIPT_DIR/reload-apps.sh" &
