@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-
-dir="$HOME/.config/rofi"
-theme='style-1'
+source "$HOME/.config/rofi/shared/common.sh"
 
 ## Run
-rofi \
+exec rofi \
     -show run \
-    -theme ${dir}/${theme}.rasi
+    -theme "${ROFI_DIR}/${ROFI_THEME}.rasi"

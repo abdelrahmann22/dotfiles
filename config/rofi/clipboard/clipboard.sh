@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-
-dir="$HOME/.config/rofi"
-theme='style-1'
+source "$HOME/.config/rofi/shared/common.sh"
 
 ## Run
 rofi \
-    rofi -modi clipboard:~/.config/rofi/clipboard/cliphist-rofi -show clipboard -theme ${dir}/${theme}.rasi    
+    -modi "clipboard:$HOME/.config/rofi/clipboard/cliphist-rofi" \
+    -show clipboard \
+    -theme "${ROFI_DIR}/${ROFI_THEME}.rasi"

@@ -22,6 +22,3 @@ else
     nohup nautilus "$selected" >/dev/null 2>&1 &
     disown
 fi
-
-
-

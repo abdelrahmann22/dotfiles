@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+set -euo pipefail
+
+# Prevent accidental double-launch (spamming hotkey)
+LOCK_FILE="/tmp/rofi.lock"
+exec 9>"$LOCK_FILE"
+flock -n 9 || exit 0
 
 dir="$HOME/.config/rofi/screenshot"
 theme='screenshot-gnome'
@@ -9,7 +15,7 @@ options="󰍹
 󱣴"
 
 # Show menu with GNOME-style theme
-selected=$(echo "$options" | rofi -dmenu -i -mesg "Take a Screenshot" -theme ${dir}/${theme}.rasi -format 's')
+selected=$(echo "$options" | rofi -dmenu -i -mesg "Take a Screenshot" -theme "${dir}/${theme}.rasi" -format 's')
 
 # Execute screenshot based on selection - all open with satty for annotation
 if [ -n "$selected" ]; then
