@@ -103,6 +103,7 @@ install_packages() {
                 blueman
                 wl-clipboard
                 wl-clip-persist
+                socat
                 grim
                 slurp
                 hyprshot
@@ -131,6 +132,7 @@ install_packages() {
             sudo apt install -y \
                 waybar mako-notifier kanshi rofi kitty \
                 cava fastfetch playerctl blueman wl-clipboard \
+                socat \
                 grim slurp pavucontrol network-manager-gnome \
                 || log_warn "Some packages failed to install"
             
@@ -143,6 +145,7 @@ install_packages() {
                 hyprland hyprpaper hypridle hyprlock \
                 waybar mako kanshi rofi kitty \
                 cava fastfetch playerctl blueman wl-clipboard \
+                socat \
                 grim slurp pavucontrol network-manager-applet \
                 || log_warn "Some packages failed to install"
             
