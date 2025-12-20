@@ -10,16 +10,16 @@ markup=1
 
 # Colors with transparency (like Rofi search)
 # on_surface color automatically adjusts: black on bright backgrounds, white on dark backgrounds
-background-color=#0e1415CC
-text-color=#dee4e4
+background-color=#121414CC
+text-color=#e3e2e2
 
 # Subtle border (same as notification background)
 border-size=1
 border-radius=12
-border-color=#343a3b80
+border-color=#38393980
 
 # Progress bar
-progress-color=over #b1cbcf
+progress-color=over #bec8ca
 
 # ============================
 # Layout & Dimensions
@@ -58,14 +58,14 @@ history=1
 
 # Low urgency - very brief
 [urgency=low]
-background-color=#0e1415CC
-text-color=#dee4e4
+background-color=#121414CC
+text-color=#e3e2e2
 default-timeout=1500
 
 # Normal urgency - 2 seconds (rofi-style)
 [urgency=normal]
-background-color=#0e1415CC
-text-color=#dee4e4
+background-color=#121414CC
+text-color=#e3e2e2
 default-timeout=2000
 
 # Critical urgency - stays until dismissed
@@ -89,7 +89,7 @@ default-timeout=2000
 # Volume/Brightness - very brief, positioned lower on screen
 # Text color: static dark gray for contrast on all color schemes
 [app-name="volume"]
-background-color=#0e1415F0
+background-color=#121414F0
 text-color=#3b3b3b
 font=JetBrainsMono Nerd Font 12
 default-timeout=1000
@@ -99,7 +99,7 @@ padding=7, 15
 outer-margin=0,0,30,0
 anchor=bottom-center
 [app-name="brightness"]
-background-color=#0e1415F0
+background-color=#121414F0
 text-color=#3b3b3b
 font=JetBrainsMono Nerd Font 12
 default-timeout=1000
