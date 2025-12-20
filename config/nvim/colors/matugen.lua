@@ -14,70 +14,70 @@ local M = {}
 
 M.colors = {
   -- Base colors
-  bg = "#0e1415",
-  bg_dark = "#0e1415",
-  bg_float = "#1b2122",
-  bg_highlight = "#343a3b",
-  bg_popup = "#1b2122",
-  bg_search = "#004f56",
-  bg_sidebar = "#171d1d",
-  bg_statusline = "#1b2122",
-  bg_visual = "#324b4e",
+  bg = "#121414",
+  bg_dark = "#121414",
+  bg_float = "#1f2020",
+  bg_highlight = "#383939",
+  bg_popup = "#1f2020",
+  bg_search = "#394a4c",
+  bg_sidebar = "#1b1c1c",
+  bg_statusline = "#1f2020",
+  bg_visual = "#3f484a",
   
-  fg = "#dee4e4",
-  fg_dark = "#bec8ca",
-  fg_float = "#dee4e4",
-  fg_gutter = "#899294",
-  fg_sidebar = "#dee4e4",
+  fg = "#e3e2e2",
+  fg_dark = "#c7c6c6",
+  fg_float = "#e3e2e2",
+  fg_gutter = "#919190",
+  fg_sidebar = "#e3e2e2",
   
-  border = "#899294",
-  border_highlight = "#81d3de",
+  border = "#919190",
+  border_highlight = "#b8cacc",
   
-  black = "#0e1415",
-  blue = "#afc6ff",
-  blue0 = "#81d3de",
-  blue1 = "#004f56",
-  blue2 = "#b1cbcf",
-  blue5 = "#b9c6ea",
-  blue6 = "#394664",
-  blue7 = "#324b4e",
+  black = "#121414",
+  blue = "#c2c6d6",
+  blue0 = "#b8cacc",
+  blue1 = "#394a4c",
+  blue2 = "#bec8ca",
+  blue5 = "#b1cbcf",
+  blue6 = "#324b4e",
+  blue7 = "#3f484a",
   
-  comment = "#899294",
+  comment = "#919190",
   
-  cyan = "#80d4d9",
+  cyan = "#b8cacb",
   
-  dark3 = "#3f484a",
-  dark5 = "#3f484a",
+  dark3 = "#464747",
+  dark5 = "#464747",
   
-  green = "#95d5a7",
-  green1 = "#b9c6ea",
-  green2 = "#394664",
+  green = "#bbcabc",
+  green1 = "#b1cbcf",
+  green2 = "#324b4e",
   
-  magenta = "#e4b7f3",
-  magenta2 = "#b9c6ea",
+  magenta = "#d1c2d2",
+  magenta2 = "#b1cbcf",
   
-  orange = "#b8cf84",
-  purple = "#e4b7f3",
+  orange = "#c4c9b1",
+  purple = "#d1c2d2",
   
-  red = "#ffb595",
+  red = "#dfc0b4",
   red1 = "#ffb4ab",
   
-  teal = "#b1cbcf",
+  teal = "#bec8ca",
   
-  terminal_black = "#0e1415",
+  terminal_black = "#121414",
   
-  yellow = "#b8cf84",
+  yellow = "#c4c9b1",
   
   git = {
-    add = "#95d5a7",
-    change = "#b8cf84",
-    delete = "#ffb595",
+    add = "#bbcabc",
+    change = "#c4c9b1",
+    delete = "#dfc0b4",
   },
   
   gitSigns = {
-    add = "#95d5a7",
-    change = "#b8cf84",
-    delete = "#ffb595",
+    add = "#bbcabc",
+    change = "#c4c9b1",
+    delete = "#dfc0b4",
   },
 }
 
