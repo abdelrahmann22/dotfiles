@@ -11,6 +11,7 @@ configuration {
     hover-select:               true;
     me-select-entry:            "";
     me-accept-entry:            "MousePrimary";
+    click-to-exit:              true;
 }
 
 /*****----- Global Properties -----*****/

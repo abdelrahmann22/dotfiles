@@ -17,8 +17,7 @@ configuration {
     display-filebrowser:        "";
     display-window:             "";
     display-emoji:              "󰞅";
-    display-clipboard:          "";
-	drun-display-format:        "{name}";
+    display-clipboard:          "";    click-to-exit:              true;	drun-display-format:        "{name}";
     window-format:              "{t}";
     hover-select:               true;
     me-select-entry:            "";

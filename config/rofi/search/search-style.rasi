@@ -18,6 +18,7 @@ configuration {
     me-select-entry:            "";
     me-accept-entry:            "MousePrimary";
     matching:                   "normal";
+    click-to-exit:              true;
     sort:                       true;
     sorting-method:             "fzf";
     combi-hide-mode-prefix:     false;
