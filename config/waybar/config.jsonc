@@ -92,7 +92,7 @@
     "tooltip": true,
     "return-type": "json",
     "exec": "~/.config/waybar/scripts/sysinfo.sh",
-    "interval": 2,
+    "interval": 5,
     "on-click": "kitty -e btop"
   },
 
@@ -166,7 +166,6 @@
   },
   "custom/mic-indicator": {
     "exec": "~/.config/waybar/scripts/check-mic.sh",
-    "interval": 1,
     "format": "{}",
     "tooltip": true,
     "return-type": "json",
@@ -177,11 +176,10 @@
   },
   "custom/screenrecording-indicator": {
     "exec": "~/.config/waybar/scripts/check-recording.sh",
-    "interval": 2,
     "format": "{}",
     "tooltip": true,
     "return-type": "json",
-    "signal": 8
+    "signal": 10
   },
   "custom/notification": {
     "tooltip": false,
@@ -190,13 +188,6 @@
     "on-click": "makoctl dismiss",
     "on-click-right": "makoctl dismiss --all",
     "on-click-middle": "makoctl invoke"
-  },
-
-  "custom/netusage": {
-    "interval": 1,
-    "return-type": "json",
-    "exec": "~/.config/waybar/scripts/netusage2.sh",
-    "format": "{}  "
   },
   "hyprland/language": {
     "format": "{}",

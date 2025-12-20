@@ -25,7 +25,3 @@ fi
 
 # No mic usage detected - output empty to hide the module
 echo "{\"text\":\"\",\"tooltip\":\"\",\"class\":\"inactive\"}"
-
-
-
-

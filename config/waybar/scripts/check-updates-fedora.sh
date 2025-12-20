@@ -15,8 +15,3 @@ if [ "$total" -gt 0 ]; then
 else
   echo "{\"text\":\"\",\"class\":\"updated\",\"tooltip\":\"System up to date\"}"
 fi
-
-
-
-
-

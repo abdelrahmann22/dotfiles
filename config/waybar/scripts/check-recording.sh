@@ -17,8 +17,3 @@ fi
 
 # No recording detected - output empty to hide the module
 echo "{\"text\":\"\",\"tooltip\":\"\",\"class\":\"idle\"}"
-
-
-
-
-
