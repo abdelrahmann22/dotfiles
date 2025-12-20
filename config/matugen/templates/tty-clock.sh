@@ -25,4 +25,3 @@ export TTY_CLOCK_RESET="\033[0m"
 
 # Run tty-clock with color support
 # tty-clock -c -C $(echo "$PRIMARY_COLOR" | sed 's/#//')
-

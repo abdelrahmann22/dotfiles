@@ -1,9 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
 
 # Wallpaper application script with parallel app reloads
-# Usage: apply-wallpaper.sh <wallpaper_path>
+# Usage: apply-wallpaper.sh <wallpaper_path> [matugen_type]
+# Example: apply-wallpaper.sh ~/Pictures/wall.jpg scheme-expressive
 
-WALLPAPER_PATH="$1"
+WALLPAPER_PATH="${1:-}"
+MATUGEN_TYPE="${2:-${MATUGEN_TYPE:-scheme-neutral}}"
 SCRIPT_DIR="$(dirname "$(readlink -f "$0")")"
 
 if [ -z "$WALLPAPER_PATH" ]; then
@@ -11,15 +14,13 @@ if [ -z "$WALLPAPER_PATH" ]; then
     exit 1
 fi
 
-# Run matugen to generate colors (no post_hooks, just template generation)
-matugen image "$WALLPAPER_PATH"
+# Prevent overlapping runs (e.g. spam-clicking wallpapers)
+LOCK_FILE="/tmp/matugen-apply-wallpaper.lock"
+exec 9>"$LOCK_FILE"
+flock -n 9 || exit 0
 
-# Now reload all apps in parallel
-"$SCRIPT_DIR/reload-apps.sh"
+# Run matugen to generate colors (template generation)
+matugen image --type "$MATUGEN_TYPE" "$WALLPAPER_PATH"
 
-# Update hyprpaper config if needed
-if [ -f "$HOME/.config/hypr/scripts/update_hyprpaper.sh" ]; then
-    "$HOME/.config/hypr/scripts/update_hyprpaper.sh" "$WALLPAPER_PATH" &
-fi
-
-wait
+# Now reload all apps in background (non-blocking)
+"$SCRIPT_DIR/reload-apps.sh" &

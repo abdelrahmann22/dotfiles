@@ -96,4 +96,3 @@ echo "  1. Run: ~/.config/matugen/scripts/apply-wallpaper.sh ~/path/to/image.jpg
 echo "  2. Or: Select a wallpaper in waypaper"
 echo ""
 echo "Applications will reload silently in the background."
-

@@ -9,4 +9,3 @@
 # through your terminal theme
 
 tty-clock -c -C 4 "$@"
-

@@ -3,8 +3,9 @@
 [config.wallpaper]
 command = "swww"
 # Apply to every detected output; swww otherwise targets only the focused one.
-arguments = ["img", "--outputs", "all", "--transition-type", "wave", "--transition-step", "20", "--transition-angle", "45", "--transition-duration", "1", "--transition-fps", "144"]
-set = true
+arguments = ["img", "--outputs", "all", "--transition-type", "wave", "--transition-step", "20", "--transition-angle", "45", "--transition-duration", "0.5", "--transition-fps", "60"]
+# Disabled - waypaper already sets wallpaper via swww backend
+set = false
 
 [templates.gtk3]
 input_path = './templates/gtk.css'
@@ -79,25 +80,9 @@ output_path = "~/.config/nvim/colors/matugen.lua"
 # input_path = "./templates/nvim-lazyvim.lua"
 # output_path = "~/.config/nvim/colors/matugen-light.lua"
 
-[templates.discord]
-input_path = './templates/midnight-discord.css'
-output_path = '~/.config/Vencord/themes/midnight-discord.css'
-
-[templates.discord-flatpak]
-input_path = './templates/midnight-discord.css'
-output_path = '~/.var/app/com.discordapp.Discord/config/Vencord/themes/midnight-discord.css'
-
 [templates.yazi]
 input_path = "./templates/yazi.toml"
 output_path = "~/.config/yazi/theme.toml"
-
-[templates.fuzzel]
-input_path = "./templates/fuzzel.ini"
-output_path = "~/.config/fuzzel/fuzzel.ini"
-
-[templates.vesktop]
-input_path = './templates/vesktop-midnight-discord.css'
-output_path = '~/.var/app/dev.vencord.Vesktop/config/vesktop/themes/themes.css'
 
 [config.custom_colors.red]
 color = "#FF0000"

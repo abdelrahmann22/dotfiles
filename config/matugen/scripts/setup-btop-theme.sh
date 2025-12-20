@@ -24,5 +24,4 @@ EOF
 fi
 
 # Send signal to reload btop if it's running
-pkill -SIGUSR1 btop 2>/dev/null || true
-
+pkill -SIGUSR2 btop 2>/dev/null || true
