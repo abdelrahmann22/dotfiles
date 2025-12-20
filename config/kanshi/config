@@ -12,9 +12,9 @@ profile dual-monitor {
         scale 1
     }
 
-    exec ~/.config/waybar/scripts/launch-waybar.sh
-    exec hyprctl dispatch focusmonitor HDMI-A-1 || true
+    exec ~/.config/hypr/scripts/restore-workspaces.sh
 }
+
 profile lid-closed {
     output HDMI-A-1 {
         enable
@@ -26,7 +26,7 @@ profile lid-closed {
         disable
     }
 
-    exec ~/.config/waybar/scripts/launch-waybar.sh
+    exec ~/.config/hypr/scripts/refocus-window.sh
 }
 
 
@@ -37,6 +37,7 @@ profile laptop-only {
         position 0,0
         scale 1.25
     }
-    exec ~/.config/waybar/scripts/launch-waybar.sh
+
+    exec ~/.config/hypr/scripts/refocus-window.sh
 }
 
