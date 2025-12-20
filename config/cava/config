@@ -3,16 +3,16 @@ framerate = 144
 
 [color]
 background = 'default'
-foreground = '#81d3de'
+foreground = '#b8cacc'
 
 gradient = 0
-gradient_color_1 = '#004f56'
-gradient_color_2 = '#81d3de'
-gradient_color_3 = '#9df0fb'
+gradient_color_1 = '#394a4c'
+gradient_color_2 = '#b8cacc'
+gradient_color_3 = '#d4e6e8'
 
 horizontal_gradient = 0
-horizontal_gradient_color_1 = '#004f56'
-horizontal_gradient_color_2 = '#81d3de'
-horizontal_gradient_color_3 = '#9df0fb'
-horizontal_gradient_color_4 = '#81d3de'
-horizontal_gradient_color_5 = '#004f56'
+horizontal_gradient_color_1 = '#394a4c'
+horizontal_gradient_color_2 = '#b8cacc'
+horizontal_gradient_color_3 = '#d4e6e8'
+horizontal_gradient_color_4 = '#b8cacc'
+horizontal_gradient_color_5 = '#394a4c'
