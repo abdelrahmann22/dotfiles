@@ -2,18 +2,8 @@
 
 # Brightness control script with mako notifications
 
-get_brightness() {
-    brightnessctl get
-}
-
-get_max_brightness() {
-    brightnessctl max
-}
-
 get_brightness_percent() {
-    current=$(get_brightness)
-    max=$(get_max_brightness)
-    echo $((current * 100 / max))
+    brightnessctl -m | awk -F, '{gsub(/%/,""); print int($4)}'
 }
 
 get_brightness_icon() {
@@ -46,4 +36,3 @@ case $1 in
         send_notification
         ;;
 esac
-

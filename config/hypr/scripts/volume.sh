@@ -2,12 +2,17 @@
 
 # Volume control script with mako notifications
 
+# Get volume info once and parse both values
+get_volume_info() {
+    wpctl get-volume @DEFAULT_AUDIO_SINK@
+}
+
 get_volume() {
-    wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print int($2 * 100)}'
+    echo "$1" | awk '{print int($2 * 100)}'
 }
 
 get_mute_status() {
-    wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q "MUTED" && echo "yes" || echo "no"
+    echo "$1" | grep -q "MUTED" && echo "yes" || echo "no"
 }
 
 get_volume_icon() {
@@ -28,8 +33,10 @@ get_volume_icon() {
 }
 
 send_notification() {
-    volume=$(get_volume)
-    mute=$(get_mute_status)
+    local info
+    info=$(get_volume_info)
+    volume=$(get_volume "$info")
+    mute=$(get_mute_status "$info")
     icon=$(get_volume_icon "$volume" "$mute")
     
     if [ "$mute" = "yes" ]; then
@@ -41,12 +48,12 @@ send_notification() {
 
 case $1 in
     up)
-        wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
+        wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%+
         wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
         send_notification
         ;;
     down)
-        wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
+        wpctl set-volume -l 1.0 @DEFAULT_AUDIO_SINK@ 5%-
         wpctl set-mute @DEFAULT_AUDIO_SINK@ 0
         send_notification
         ;;
@@ -55,6 +62,3 @@ case $1 in
         send_notification
         ;;
 esac
-
-
-

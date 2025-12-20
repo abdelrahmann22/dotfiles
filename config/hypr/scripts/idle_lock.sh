@@ -16,4 +16,3 @@ fi
 
 # No audio playing, proceed with lock
 loginctl lock-session
-
