@@ -1,45 +1,66 @@
 #!/usr/bin/env bash
-# Dynamic hyprlock launcher that adjusts widget monitor placement
-# based on currently connected displays.
-# Widgets (input-field, labels) go to HDMI-A-1 if connected, otherwise eDP-1.
-# Background remains on all monitors.
+# Dynamic hyprlock launcher that generates config at lock time
+# Shows widgets on the preferred monitor (HDMI if connected, otherwise all monitors)
+# Also gets the current wallpaper from waypaper config
 
 set -euo pipefail
 
 get_preferred_monitor() {
-    # Prefer HDMI-A-1 if enabled, otherwise eDP-1
-    local monitors_json hdmi
+    # Prefer HDMI-A-1 if enabled, otherwise empty (all monitors)
+    local monitors_json hdmi edp
     monitors_json="$(hyprctl monitors -j 2>/dev/null || echo '[]')"
     hdmi="$(echo "$monitors_json" | jq -r '.[] | select(.name=="HDMI-A-1" and (.disabled|not)) | .name' | head -n1 || true)"
-    if [[ -n "${hdmi:-}" ]]; then
+    edp="$(echo "$monitors_json" | jq -r '.[] | select(.name=="eDP-1" and (.disabled|not)) | .name' | head -n1 || true)"
+    
+    # If both monitors are connected, use HDMI
+    # If only one monitor, leave empty (show on all/that one)
+    if [[ -n "${hdmi:-}" && -n "${edp:-}" ]]; then
         echo "HDMI-A-1"
     else
-        echo "eDP-1"
+        echo ""  # Empty = all monitors (or the only one connected)
+    fi
+}
+
+get_current_wallpaper() {
+    local wp=""
+    # Try waypaper config first
+    if [[ -f "$HOME/.config/waypaper/config.ini" ]]; then
+        wp=$(grep -oP '^wallpaper\s*=\s*\K.*' "$HOME/.config/waypaper/config.ini" | head -1 || true)
+        wp="${wp/#\~/$HOME}"
+    fi
+    # Fallback to hyprpaper config
+    if [[ -z "$wp" || ! -f "$wp" ]]; then
+        wp=$(grep -oP '^preload\s*=\s*\K.*' "$HOME/.config/hypr/hyprpaper.conf" | head -1 || true)
+        wp="${wp/#\~/$HOME}"
+    fi
+    # Final fallback
+    if [[ -z "$wp" || ! -f "$wp" ]]; then
+        echo "screenshot"
+    else
+        echo "$wp"
     fi
 }
 
 PREFERRED_MONITOR="$(get_preferred_monitor)"
+WALLPAPER="$(get_current_wallpaper)"
 
 # Generate dynamic hyprlock config with the preferred monitor
 DYNAMIC_CONFIG="/tmp/hyprlock-dynamic.conf"
 
 cat > "$DYNAMIC_CONFIG" << EOF
 # Dynamically generated hyprlock config
-# Widget monitor: $PREFERRED_MONITOR
+# Widget monitor: ${PREFERRED_MONITOR:-all}
+# Wallpaper: $WALLPAPER
 
 # BACKGROUND (all monitors)
 background {
     monitor = 
-    path = $(grep -oP 'path = \K.*' ~/.config/hypr/hyprlock.conf 2>/dev/null | head -1 || echo "screenshot")
+    path = $WALLPAPER
 }
 
 # GENERAL
 general {
-    no_fade_in = false
-    no_fade_out = false
     hide_cursor = true
-    grace = 0
-    disable_loading_bar = true
     ignore_empty_input = true
 }
 
@@ -65,8 +86,6 @@ input-field {
     check_color = rgb(919190)
     fail_color = rgb(ffb4ab)
     fail_text = <b>\$ATTEMPTS</b>
-    fail_timeout = 2000
-    fail_transition = 300
 }
 
 # DATE (preferred monitor only)
